@@ -23,276 +23,309 @@ namespace SchoolFacilities
 
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.pnlBody = new System.Windows.Forms.Panel();
-            this.pnlTop = new SchoolFacilities.BufferedPanel();
-            this.pnlSearchHost = new System.Windows.Forms.Panel();
-            this.txtSearch = new SchoolFacilities.PillTextBox();
-            this.flowRight = new System.Windows.Forms.FlowLayoutPanel();
-            this.navHome = new SchoolFacilities.NavLink();
-            this.navBell = new SchoolFacilities.NavLink();
-            this.userChip = new SchoolFacilities.UserChip();
-            this.logo = new SchoolFacilities.LogoControl();
-            this.pnlMenuHost = new System.Windows.Forms.Panel();
-            this.btnMenu = new SchoolFacilities.IconButton();
-            this.pnlTopLine = new System.Windows.Forms.Panel();
-            this.ctxUser = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.mnuChangePassword = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuSchoolInfo = new System.Windows.Forms.ToolStripMenuItem();
-            this.sepUser = new System.Windows.Forms.ToolStripSeparator();
-            this.mnuLogout = new System.Windows.Forms.ToolStripMenuItem();
-            this.ctxModules = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.mnuHome = new System.Windows.Forms.ToolStripMenuItem();
-            this.sepModules = new System.Windows.Forms.ToolStripSeparator();
-            this.mnuBuildings = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuRooms = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuTypes = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuEquipment = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuMaintenance = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuReports = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuUsers = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnlTop.SuspendLayout();
-            this.pnlSearchHost.SuspendLayout();
-            this.flowRight.SuspendLayout();
-            this.pnlMenuHost.SuspendLayout();
-            this.ctxUser.SuspendLayout();
-            this.ctxModules.SuspendLayout();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            pnlBody = new Panel();
+            pnlTop = new BufferedPanel();
+            pnlSearchHost = new Panel();
+            txtSearch = new PillTextBox();
+            flowRight = new FlowLayoutPanel();
+            navHome = new NavLink();
+            navBell = new NavLink();
+            userChip = new UserChip();
+            logo = new LogoControl();
+            pnlMenuHost = new Panel();
+            btnMenu = new IconButton();
+            pnlTopLine = new Panel();
+            ctxUser = new ContextMenuStrip(components);
+            mnuChangePassword = new ToolStripMenuItem();
+            mnuSchoolInfo = new ToolStripMenuItem();
+            sepUser = new ToolStripSeparator();
+            mnuLogout = new ToolStripMenuItem();
+            ctxModules = new ContextMenuStrip(components);
+            mnuHome = new ToolStripMenuItem();
+            sepModules = new ToolStripSeparator();
+            mnuBuildings = new ToolStripMenuItem();
+            mnuRooms = new ToolStripMenuItem();
+            mnuTypes = new ToolStripMenuItem();
+            mnuEquipment = new ToolStripMenuItem();
+            mnuMaintenance = new ToolStripMenuItem();
+            mnuReports = new ToolStripMenuItem();
+            mnuUsers = new ToolStripMenuItem();
+            pnlTop.SuspendLayout();
+            pnlSearchHost.SuspendLayout();
+            flowRight.SuspendLayout();
+            pnlMenuHost.SuspendLayout();
+            ctxUser.SuspendLayout();
+            ctxModules.SuspendLayout();
+            SuspendLayout();
             // 
             // pnlBody
             // 
-            this.pnlBody.BackColor = System.Drawing.Color.FromArgb(233, 238, 243);
-            this.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBody.Size = new System.Drawing.Size(1280, 714);
-            this.pnlBody.Name = "pnlBody";
+            pnlBody.BackColor = Color.FromArgb(233, 238, 243);
+            pnlBody.Dock = DockStyle.Fill;
+            pnlBody.Location = new Point(0, 66);
+            pnlBody.Name = "pnlBody";
+            pnlBody.Size = new Size(1280, 714);
+            pnlBody.TabIndex = 2;
+            pnlBody.Paint += pnlBody_Paint;
             // 
             // pnlTop
             // 
-            this.pnlTop.BackColor = System.Drawing.Color.White;
-            this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTop.Size = new System.Drawing.Size(1280, 66);
-            this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Controls.Add(this.pnlSearchHost);
-            this.pnlTop.Controls.Add(this.flowRight);
-            this.pnlTop.Controls.Add(this.logo);
-            this.pnlTop.Controls.Add(this.pnlMenuHost);
-            this.pnlTop.Controls.Add(this.pnlTopLine);
+            pnlTop.BackColor = Color.White;
+            pnlTop.Controls.Add(pnlSearchHost);
+            pnlTop.Controls.Add(flowRight);
+            pnlTop.Controls.Add(logo);
+            pnlTop.Controls.Add(pnlMenuHost);
+            pnlTop.Controls.Add(pnlTopLine);
+            pnlTop.Dock = DockStyle.Top;
+            pnlTop.Location = new Point(0, 0);
+            pnlTop.Name = "pnlTop";
+            pnlTop.Size = new Size(1280, 66);
+            pnlTop.TabIndex = 3;
             // 
             // pnlSearchHost
             // 
-            this.pnlSearchHost.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlSearchHost.Padding = new System.Windows.Forms.Padding(16, 13, 16, 13);
-            this.pnlSearchHost.Size = new System.Drawing.Size(400, 65);
-            this.pnlSearchHost.Name = "pnlSearchHost";
-            this.pnlSearchHost.Controls.Add(this.txtSearch);
+            pnlSearchHost.Controls.Add(txtSearch);
+            pnlSearchHost.Dock = DockStyle.Fill;
+            pnlSearchHost.Location = new Point(396, 0);
+            pnlSearchHost.Name = "pnlSearchHost";
+            pnlSearchHost.Padding = new Padding(16, 13, 16, 13);
+            pnlSearchHost.Size = new Size(346, 65);
+            pnlSearchHost.TabIndex = 0;
             // 
             // txtSearch
             // 
-            this.txtSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtSearch.MaximumSize = new System.Drawing.Size(460, 0);
-            this.txtSearch.PlaceholderText = "Tìm chức năng hoặc thiết bị...";
-            this.txtSearch.RightIcon = SchoolFacilities.IconKind.Search;
-            this.txtSearch.Size = new System.Drawing.Size(400, 40);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.EnterPressed += new System.EventHandler(this.txtSearch_EnterPressed);
+            txtSearch.Dock = DockStyle.Fill;
+            txtSearch.LeftIcon = null;
+            txtSearch.Location = new Point(16, 13);
+            txtSearch.MaximumSize = new Size(460, 0);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Password = false;
+            txtSearch.PlaceholderText = "Tìm chức năng hoặc thiết bị...";
+            txtSearch.Radius = 20;
+            txtSearch.RightIcon = IconKind.Search;
+            txtSearch.Size = new Size(314, 39);
+            txtSearch.TabIndex = 0;
+            txtSearch.EnterPressed += txtSearch_EnterPressed;
             // 
             // flowRight
             // 
-            this.flowRight.AutoSize = true;
-            this.flowRight.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flowRight.Padding = new System.Windows.Forms.Padding(0, 9, 12, 0);
-            this.flowRight.Size = new System.Drawing.Size(560, 65);
-            this.flowRight.WrapContents = false;
-            this.flowRight.Name = "flowRight";
-            this.flowRight.Controls.Add(this.navHome);
-            this.flowRight.Controls.Add(this.navBell);
-            this.flowRight.Controls.Add(this.userChip);
+            flowRight.AutoSize = true;
+            flowRight.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            flowRight.Controls.Add(navHome);
+            flowRight.Controls.Add(navBell);
+            flowRight.Controls.Add(userChip);
+            flowRight.Dock = DockStyle.Right;
+            flowRight.Location = new Point(742, 0);
+            flowRight.Name = "flowRight";
+            flowRight.Padding = new Padding(0, 9, 12, 0);
+            flowRight.Size = new Size(538, 65);
+            flowRight.TabIndex = 1;
+            flowRight.WrapContents = false;
             // 
             // navHome
             // 
-            this.navHome.Caption = "Trang chủ";
-            this.navHome.Kind = SchoolFacilities.IconKind.Home;
-            this.navHome.Margin = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            this.navHome.Size = new System.Drawing.Size(128, 44);
-            this.navHome.Name = "navHome";
-            this.navHome.Click += new System.EventHandler(this.navHome_Click);
+            navHome.Badge = 0;
+            navHome.Caption = "Trang chủ";
+            navHome.Kind = IconKind.Home;
+            navHome.Location = new Point(0, 11);
+            navHome.Margin = new Padding(0, 2, 0, 0);
+            navHome.Name = "navHome";
+            navHome.Size = new Size(128, 44);
+            navHome.TabIndex = 0;
+            navHome.Click += navHome_Click;
             // 
             // navBell
             // 
-            this.navBell.Caption = "Thông báo";
-            this.navBell.Kind = SchoolFacilities.IconKind.Bell;
-            this.navBell.Margin = new System.Windows.Forms.Padding(0, 2, 6, 0);
-            this.navBell.Size = new System.Drawing.Size(132, 44);
-            this.navBell.Name = "navBell";
-            this.navBell.Click += new System.EventHandler(this.navBell_Click);
+            navBell.Badge = 0;
+            navBell.Caption = "Thông báo";
+            navBell.Kind = IconKind.Bell;
+            navBell.Location = new Point(128, 11);
+            navBell.Margin = new Padding(0, 2, 6, 0);
+            navBell.Name = "navBell";
+            navBell.Size = new Size(132, 44);
+            navBell.TabIndex = 1;
+            navBell.Click += navBell_Click;
             // 
             // userChip
             // 
-            this.userChip.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.userChip.Size = new System.Drawing.Size(260, 48);
-            this.userChip.Name = "userChip";
-            this.userChip.Click += new System.EventHandler(this.userChip_Click);
+            userChip.FullName = "";
+            userChip.Location = new Point(266, 9);
+            userChip.Margin = new Padding(0);
+            userChip.Name = "userChip";
+            userChip.Size = new Size(260, 48);
+            userChip.TabIndex = 2;
+            userChip.Click += userChip_Click;
             // 
             // logo
             // 
-            this.logo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.logo.Size = new System.Drawing.Size(330, 66);
-            this.logo.Name = "logo";
+            logo.Dock = DockStyle.Left;
+            logo.Location = new Point(66, 0);
+            logo.Name = "logo";
+            logo.SchoolName = "TRƯỜNG HỌC";
+            logo.Size = new Size(330, 65);
+            logo.TabIndex = 2;
             // 
             // pnlMenuHost
             // 
-            this.pnlMenuHost.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlMenuHost.Padding = new System.Windows.Forms.Padding(14, 13, 12, 13);
-            this.pnlMenuHost.Size = new System.Drawing.Size(66, 66);
-            this.pnlMenuHost.Name = "pnlMenuHost";
-            this.pnlMenuHost.Controls.Add(this.btnMenu);
+            pnlMenuHost.Controls.Add(btnMenu);
+            pnlMenuHost.Dock = DockStyle.Left;
+            pnlMenuHost.Location = new Point(0, 0);
+            pnlMenuHost.Name = "pnlMenuHost";
+            pnlMenuHost.Padding = new Padding(14, 13, 12, 13);
+            pnlMenuHost.Size = new Size(66, 65);
+            pnlMenuHost.TabIndex = 3;
             // 
             // btnMenu
             // 
-            this.btnMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMenu.Kind = SchoolFacilities.IconKind.Grid;
-            this.btnMenu.Size = new System.Drawing.Size(40, 40);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            btnMenu.Dock = DockStyle.Fill;
+            btnMenu.Kind = IconKind.Grid;
+            btnMenu.Location = new Point(14, 13);
+            btnMenu.Name = "btnMenu";
+            btnMenu.Size = new Size(40, 39);
+            btnMenu.TabIndex = 0;
+            btnMenu.Click += btnMenu_Click;
             // 
             // pnlTopLine
             // 
-            this.pnlTopLine.BackColor = System.Drawing.Color.FromArgb(229, 233, 238);
-            this.pnlTopLine.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlTopLine.Size = new System.Drawing.Size(1280, 1);
-            this.pnlTopLine.Name = "pnlTopLine";
+            pnlTopLine.BackColor = Color.FromArgb(229, 233, 238);
+            pnlTopLine.Dock = DockStyle.Bottom;
+            pnlTopLine.Location = new Point(0, 65);
+            pnlTopLine.Name = "pnlTopLine";
+            pnlTopLine.Size = new Size(1280, 1);
+            pnlTopLine.TabIndex = 4;
             // 
             // ctxUser
             // 
-            this.ctxUser.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctxUser.Size = new System.Drawing.Size(261, 90);
-            this.ctxUser.Name = "ctxUser";
-            this.ctxUser.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.mnuChangePassword, this.mnuSchoolInfo, this.sepUser, this.mnuLogout });
+            ctxUser.Font = new Font("Segoe UI", 10.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ctxUser.ImageScalingSize = new Size(20, 20);
+            ctxUser.Items.AddRange(new ToolStripItem[] { mnuChangePassword, mnuSchoolInfo, sepUser, mnuLogout });
+            ctxUser.Name = "ctxUser";
+            ctxUser.Size = new Size(294, 128);
             // 
             // mnuChangePassword
             // 
-            this.mnuChangePassword.Size = new System.Drawing.Size(260, 28);
-            this.mnuChangePassword.Text = "Đổi mật khẩu";
-            this.mnuChangePassword.Name = "mnuChangePassword";
-            this.mnuChangePassword.Click += new System.EventHandler(this.mnuChangePassword_Click);
+            mnuChangePassword.Name = "mnuChangePassword";
+            mnuChangePassword.Size = new Size(293, 30);
+            mnuChangePassword.Text = "Thông tin tài khoản";
+            mnuChangePassword.Click += mnuChangePassword_Click;
             // 
             // mnuSchoolInfo
             // 
-            this.mnuSchoolInfo.Size = new System.Drawing.Size(260, 28);
-            this.mnuSchoolInfo.Text = "Cập nhật thông tin trường";
-            this.mnuSchoolInfo.Name = "mnuSchoolInfo";
-            this.mnuSchoolInfo.Click += new System.EventHandler(this.mnuSchoolInfo_Click);
+            mnuSchoolInfo.Name = "mnuSchoolInfo";
+            mnuSchoolInfo.Size = new Size(293, 30);
+            mnuSchoolInfo.Text = "Cập nhật thông tin trường";
+            mnuSchoolInfo.Click += mnuSchoolInfo_Click;
             // 
             // sepUser
             // 
-            this.sepUser.Size = new System.Drawing.Size(257, 6);
-            this.sepUser.Name = "sepUser";
+            sepUser.Name = "sepUser";
+            sepUser.Size = new Size(290, 6);
             // 
             // mnuLogout
             // 
-            this.mnuLogout.Size = new System.Drawing.Size(260, 28);
-            this.mnuLogout.Text = "Đăng xuất";
-            this.mnuLogout.Name = "mnuLogout";
-            this.mnuLogout.Click += new System.EventHandler(this.mnuLogout_Click);
+            mnuLogout.Name = "mnuLogout";
+            mnuLogout.Size = new Size(293, 30);
+            mnuLogout.Text = "Đăng xuất";
+            mnuLogout.Click += mnuLogout_Click;
             // 
             // ctxModules
             // 
-            this.ctxModules.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctxModules.Size = new System.Drawing.Size(261, 200);
-            this.ctxModules.Name = "ctxModules";
-            this.ctxModules.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.mnuHome, this.sepModules, this.mnuBuildings, this.mnuRooms, this.mnuTypes, this.mnuEquipment, this.mnuMaintenance, this.mnuReports, this.mnuUsers });
+            ctxModules.Font = new Font("Segoe UI", 10.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ctxModules.ImageScalingSize = new Size(20, 20);
+            ctxModules.Items.AddRange(new ToolStripItem[] { mnuHome, sepModules, mnuBuildings, mnuRooms, mnuTypes, mnuEquipment, mnuMaintenance, mnuReports, mnuUsers });
+            ctxModules.Name = "ctxModules";
+            ctxModules.Size = new Size(182, 250);
             // 
             // mnuHome
             // 
-            this.mnuHome.Size = new System.Drawing.Size(260, 28);
-            this.mnuHome.Text = "Trang chủ";
-            this.mnuHome.Tag = "home";
-            this.mnuHome.Name = "mnuHome";
-            this.mnuHome.Click += new System.EventHandler(this.mnuModule_Click);
+            mnuHome.Name = "mnuHome";
+            mnuHome.Size = new Size(181, 30);
+            mnuHome.Tag = "home";
+            mnuHome.Text = "Trang chủ";
+            mnuHome.Click += mnuModule_Click;
             // 
             // sepModules
             // 
-            this.sepModules.Size = new System.Drawing.Size(257, 6);
-            this.sepModules.Name = "sepModules";
+            sepModules.Name = "sepModules";
+            sepModules.Size = new Size(178, 6);
             // 
             // mnuBuildings
             // 
-            this.mnuBuildings.Size = new System.Drawing.Size(260, 28);
-            this.mnuBuildings.Text = "Tòa nhà";
-            this.mnuBuildings.Tag = "buildings";
-            this.mnuBuildings.Name = "mnuBuildings";
-            this.mnuBuildings.Click += new System.EventHandler(this.mnuModule_Click);
+            mnuBuildings.Name = "mnuBuildings";
+            mnuBuildings.Size = new Size(181, 30);
+            mnuBuildings.Tag = "buildings";
+            mnuBuildings.Text = "Tòa nhà";
+            mnuBuildings.Click += mnuModule_Click;
             // 
             // mnuRooms
             // 
-            this.mnuRooms.Size = new System.Drawing.Size(260, 28);
-            this.mnuRooms.Text = "Phòng";
-            this.mnuRooms.Tag = "rooms";
-            this.mnuRooms.Name = "mnuRooms";
-            this.mnuRooms.Click += new System.EventHandler(this.mnuModule_Click);
+            mnuRooms.Name = "mnuRooms";
+            mnuRooms.Size = new Size(181, 30);
+            mnuRooms.Tag = "rooms";
+            mnuRooms.Text = "Phòng";
+            mnuRooms.Click += mnuModule_Click;
             // 
             // mnuTypes
             // 
-            this.mnuTypes.Size = new System.Drawing.Size(260, 28);
-            this.mnuTypes.Text = "Loại thiết bị";
-            this.mnuTypes.Tag = "types";
-            this.mnuTypes.Name = "mnuTypes";
-            this.mnuTypes.Click += new System.EventHandler(this.mnuModule_Click);
+            mnuTypes.Name = "mnuTypes";
+            mnuTypes.Size = new Size(181, 30);
+            mnuTypes.Tag = "types";
+            mnuTypes.Text = "Loại thiết bị";
+            mnuTypes.Click += mnuModule_Click;
             // 
             // mnuEquipment
             // 
-            this.mnuEquipment.Size = new System.Drawing.Size(260, 28);
-            this.mnuEquipment.Text = "Thiết bị";
-            this.mnuEquipment.Tag = "equipment";
-            this.mnuEquipment.Name = "mnuEquipment";
-            this.mnuEquipment.Click += new System.EventHandler(this.mnuModule_Click);
+            mnuEquipment.Name = "mnuEquipment";
+            mnuEquipment.Size = new Size(181, 30);
+            mnuEquipment.Tag = "equipment";
+            mnuEquipment.Text = "Thiết bị";
+            mnuEquipment.Click += mnuModule_Click;
             // 
             // mnuMaintenance
             // 
-            this.mnuMaintenance.Size = new System.Drawing.Size(260, 28);
-            this.mnuMaintenance.Text = "Bảo trì";
-            this.mnuMaintenance.Tag = "maintenance";
-            this.mnuMaintenance.Name = "mnuMaintenance";
-            this.mnuMaintenance.Click += new System.EventHandler(this.mnuModule_Click);
+            mnuMaintenance.Name = "mnuMaintenance";
+            mnuMaintenance.Size = new Size(181, 30);
+            mnuMaintenance.Tag = "maintenance";
+            mnuMaintenance.Text = "Bảo trì";
+            mnuMaintenance.Click += mnuModule_Click;
             // 
             // mnuReports
             // 
-            this.mnuReports.Size = new System.Drawing.Size(260, 28);
-            this.mnuReports.Text = "Báo cáo";
-            this.mnuReports.Tag = "reports";
-            this.mnuReports.Name = "mnuReports";
-            this.mnuReports.Click += new System.EventHandler(this.mnuModule_Click);
+            mnuReports.Name = "mnuReports";
+            mnuReports.Size = new Size(181, 30);
+            mnuReports.Tag = "reports";
+            mnuReports.Text = "Báo cáo";
+            mnuReports.Click += mnuModule_Click;
             // 
             // mnuUsers
             // 
-            this.mnuUsers.Size = new System.Drawing.Size(260, 28);
-            this.mnuUsers.Text = "Người dùng";
-            this.mnuUsers.Tag = "users";
-            this.mnuUsers.Name = "mnuUsers";
-            this.mnuUsers.Click += new System.EventHandler(this.mnuModule_Click);
+            mnuUsers.Name = "mnuUsers";
+            mnuUsers.Size = new Size(181, 30);
+            mnuUsers.Tag = "users";
+            mnuUsers.Text = "Người dùng";
+            mnuUsers.Click += mnuModule_Click;
             // 
             // MainForm
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackColor = System.Drawing.Color.FromArgb(233, 238, 243);
-            this.ClientSize = new System.Drawing.Size(1280, 780);
-            this.MinimumSize = new System.Drawing.Size(1100, 680);
-            this.Name = "MainForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quản lý cơ sở vật chất";
-            this.Controls.Add(this.pnlBody);
-            this.Controls.Add(this.pnlTop);
-            this.ctxModules.ResumeLayout(false);
-            this.ctxUser.ResumeLayout(false);
-            this.pnlMenuHost.ResumeLayout(false);
-            this.flowRight.ResumeLayout(false);
-            this.pnlSearchHost.ResumeLayout(false);
-            this.pnlTop.ResumeLayout(false);
-            this.flowRight.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleMode = AutoScaleMode.None;
+            BackColor = Color.FromArgb(233, 238, 243);
+            ClientSize = new Size(1280, 780);
+            Controls.Add(pnlBody);
+            Controls.Add(pnlTop);
+            Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            MinimumSize = new Size(1100, 680);
+            Name = "MainForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Quản lý cơ sở vật chất";
+            pnlTop.ResumeLayout(false);
+            pnlTop.PerformLayout();
+            pnlSearchHost.ResumeLayout(false);
+            flowRight.ResumeLayout(false);
+            pnlMenuHost.ResumeLayout(false);
+            ctxUser.ResumeLayout(false);
+            ctxModules.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion
