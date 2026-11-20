@@ -1,0 +1,5 @@
+# Chuỗi kết nối SQL Server (dòng đầu tiên không bắt đầu bằng # sẽ được dùng).
+# SQL Server Express cài trên máy này:
+Server=DESKTOP-2CT0SJT\SQLEXPRESS02;Database=SchoolFacilities;Integrated Security=True;TrustServerCertificate=True;
+# Dùng tài khoản SQL (bỏ dấu # ở dòng dưới và xóa dòng phía trên):
+# Server=localhost;Database=SchoolFacilities;User Id=sa;Password=MatKhauCuaBan;TrustServerCertificate=True;
